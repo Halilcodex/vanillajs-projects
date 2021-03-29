@@ -1,0 +1,120 @@
+html,
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f3f3f3;
+}
+
+main {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  min-height: calc(100vh);
+
+  .container {
+    // box-sizing: border-box;
+    .title {
+      letter-spacing: 4px;
+      text-align: center;
+      h1 {
+        margin-bottom: 7px;
+      }
+      .underline {
+        border: 2px solid #b5fed9;
+        border-radius: 5px;
+        width: 5rem;
+        margin: 0 auto;
+      }
+    }
+
+    .review {
+      background-color: white;
+      margin: 2rem 0;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 20px;
+      min-width: 400px;
+      max-width: 600px;
+      min-height: 200px;
+      border-radius: 7px;
+      box-sizing: border-box;
+
+      .img-container {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        img {
+          border-radius: 50%;
+          position: relative;
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      #author {
+        letter-spacing: 3px;
+        margin-bottom: 0;
+        text-transform: capitalize;
+      }
+      #job {
+        color: #508068;
+        text-transform: uppercase;
+        margin-top: 2px;
+        font-size: 14px;
+      }
+      #info {
+        color: #7f8481;
+      }
+
+      .btn-group {
+        .prev-btn {
+          margin-right: 1rem;
+        }
+        button {
+          background-color: #b5fed9;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+          color: white;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            background-color: #508068;
+          }
+        }
+      }
+    }
+  }
+}
+
+.img-container::before {
+  background-color: #b5fed9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: -2px;
+  border-radius: 50%;
+  content: "";
+}
+.img-container::after {
+  background-color: #b5fed9;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "@";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+}
