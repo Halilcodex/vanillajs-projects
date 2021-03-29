@@ -1,0 +1,7 @@
+#vscode config files
+.vscode
+.vscode*
+
+#css mappings
+.css.map
+**.css.map
