@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  min-height: calc(100vh - 10rem);
+}
+
+main .container .count {
+  font-size: 72px;
+  font-weight: 600px;
+}
+
+main .container .btn-group .btn {
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: white;
+  border-radius: 7px;
+  border: 3px solid black;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+main .container .btn-group .btn.reset {
+  margin: 0 1rem;
+}
+
+main .container .btn-group .btn:hover {
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
