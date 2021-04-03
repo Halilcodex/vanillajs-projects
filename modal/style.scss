@@ -1,0 +1,87 @@
+$primary-color: #182d3f;
+$general-transition: all 0.4s linear;
+
+html,
+body {
+  margin: 0;
+  font-family: "Courgette", cursive;
+  background-color: rgb(232, 232, 232);
+}
+
+main {
+  background-image: url("../assets/bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh);
+  display: flex;
+  align-items: center;
+  .main-container {
+    background-color: #9fa7ad;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    font-size: 10px;
+    border-radius: 10px;
+    color: white;
+
+    .modal-btn {
+      background-color: $primary-color;
+      padding: 10px;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $primary-color, $alpha: 0.5);
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    transition: $general-transition;
+    visibility: hidden;
+    z-index: -1000;
+
+    .modal-container {
+      background-color: white;
+      padding: 1rem;
+      min-width: 500px;
+      min-height: 200px;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      place-items: center;
+      place-content: center;
+      margin: auto;
+
+      .close-btn {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        color: red;
+        cursor: pointer;
+        background-color: $primary-color;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        &:hover {
+          background-color: lighten($primary-color, 30);
+        }
+      }
+    }
+
+    &.show-modal {
+      visibility: visible;
+      z-index: 1000;
+    }
+  }
+}
