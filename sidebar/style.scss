@@ -1,0 +1,108 @@
+$primary-color: #758448;
+$general-transition: all 0.4s linear;
+
+html,
+body {
+  //   margin: 20px;
+  font-family: "Source Code Pro", monospace;
+  background-color: lightgray;
+}
+
+nav {
+  .bars {
+    float: right;
+    width: 25px;
+    height: 35px;
+    animation: bounce 2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      animation: bounce 2s ease-in-out infinite;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.sidebar {
+  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+  width: calc(100% - 2rem);
+  height: 100%;
+  transform: translate(-100%);
+  transition: $general-transition;
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .close-btn {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      color: rgb(92, 21, 21);
+      font-weight: bolder;
+      font-size: 20px;
+      width: 20px;
+      font-family: "Train One", cursive;
+      outline: none;
+    }
+
+    h1 {
+      margin: 0;
+      span {
+        color: $primary-color;
+        font-family: "Train One", cursive;
+      }
+    }
+  }
+
+  .sidebar-links {
+    .nav-links {
+      list-style-type: none;
+      padding-left: 0px;
+      .link {
+        a {
+          text-decoration: none;
+          display: block;
+          padding: 1rem 0rem;
+          color: $primary-color;
+          &:hover {
+            cursor: pointer;
+            padding-left: 1.75rem;
+            overflow-x: $primary-color;
+            transition: $general-transition;
+            background-color: lighten($color: $primary-color, $amount: 25);
+          }
+        }
+      }
+    }
+  }
+  &.show-sidebar {
+    transform: translate(0);
+  }
+
+  @keyframes slide {
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .sidebar {
+    width: 400px;
+  }
+}

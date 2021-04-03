@@ -1,0 +1,136 @@
+html,
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: lightgray;
+}
+
+nav .bars {
+  float: right;
+  width: 25px;
+  height: 35px;
+  -webkit-animation: bounce 2s ease-in-out;
+          animation: bounce 2s ease-in-out;
+  cursor: pointer;
+}
+
+nav .bars:hover {
+  -webkit-animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.sidebar {
+  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+  width: calc(100% - 2rem);
+  height: 100%;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.sidebar .sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sidebar .sidebar-header .close-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #5c1515;
+  font-weight: bolder;
+  font-size: 20px;
+  width: 20px;
+  font-family: "Train One", cursive;
+  outline: none;
+}
+
+.sidebar .sidebar-header h1 {
+  margin: 0;
+}
+
+.sidebar .sidebar-header h1 span {
+  color: #758448;
+  font-family: "Train One", cursive;
+}
+
+.sidebar .sidebar-links .nav-links {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.sidebar .sidebar-links .nav-links .link a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem 0rem;
+  color: #758448;
+}
+
+.sidebar .sidebar-links .nav-links .link a:hover {
+  cursor: pointer;
+  padding-left: 1.75rem;
+  overflow-x: #758448;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  background-color: #b3c08c;
+}
+
+.sidebar.show-sidebar {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@-webkit-keyframes slide {}
+
+@keyframes slide {}@media screen and (min-width: 600px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
