@@ -1,0 +1,104 @@
+$primary-color: #eca72c;
+$general-transition: all 2s linear;
+
+html,
+body {
+  margin: 0;
+  font-family: "Mali", cursive;
+  background-color: rgb(232, 232, 232);
+}
+
+main {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+  margin: 1rem 0;
+
+  .header {
+    text-align: center;
+    font-weight: bold;
+    color: $primary-color;
+    font-size: 20px;
+  }
+
+  .all-questions {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    .question-con {
+      background-color: white;
+      padding: 1rem;
+      width: 100%;
+      border-radius: 5px;
+      transition: $general-transition;
+
+      .question-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5 {
+          margin: 0;
+          &::after {
+            content: "?";
+          }
+        }
+
+        .qtn-btn {
+          border: 2px solid $primary-color;
+          color: $primary-color;
+          background-color: transparent;
+          font-size: 20px;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 4px;
+          width: 30px;
+          height: 25px;
+          display: flex;
+          place-items: center;
+          place-content: center;
+          &:hover {
+            background-color: rgb(243, 243, 243);
+          }
+          .remove {
+            display: none;
+          }
+        }
+      }
+
+      .answer {
+        border-top: 2px solid rgb(243, 243, 243);
+        display: none;
+        transition: $general-transition;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    // css controller to show and hide text
+    .show-text {
+      &.question-con {
+        .question-header {
+          padding-bottom: 1rem;
+        }
+        .answer {
+          display: block;
+          transition: $general-transition;
+        }
+        .qtn-btn {
+          .add {
+            display: none;
+          }
+          .remove {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

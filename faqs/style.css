@@ -1,0 +1,120 @@
+html,
+body {
+  margin: 0;
+  font-family: "Mali", cursive;
+  background-color: #e8e8e8;
+}
+
+main {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 2rem;
+  margin: 1rem 0;
+}
+
+main .header {
+  text-align: center;
+  font-weight: bold;
+  color: #eca72c;
+  font-size: 20px;
+}
+
+main .all-questions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 2rem;
+}
+
+main .all-questions .question-con {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+main .all-questions .question-con .question-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .all-questions .question-con .question-header h5 {
+  margin: 0;
+}
+
+main .all-questions .question-con .question-header h5::after {
+  content: "?";
+}
+
+main .all-questions .question-con .question-header .qtn-btn {
+  border: 2px solid #eca72c;
+  color: #eca72c;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 30px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+main .all-questions .question-con .question-header .qtn-btn:hover {
+  background-color: #f3f3f3;
+}
+
+main .all-questions .question-con .question-header .qtn-btn .remove {
+  display: none;
+}
+
+main .all-questions .question-con .answer {
+  border-top: 2px solid #f3f3f3;
+  display: none;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+main .all-questions .question-con .answer p {
+  font-size: 14px;
+}
+
+main .all-questions .show-text.question-con .question-header {
+  padding-bottom: 1rem;
+}
+
+main .all-questions .show-text.question-con .answer {
+  display: block;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+main .all-questions .show-text.question-con .qtn-btn .add {
+  display: none;
+}
+
+main .all-questions .show-text.question-con .qtn-btn .remove {
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */
